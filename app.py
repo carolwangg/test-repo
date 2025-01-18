@@ -11,7 +11,7 @@ def search():
         return jsonify({"error":"please input a query!", "data": ""})
     
     else:
-        return request.args['q']
+        return "hello, it's me"
          
 
 if __name__ == "__main__":
