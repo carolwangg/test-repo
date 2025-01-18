@@ -1,5 +1,3 @@
-header('Content-Type: text/javascript');
-
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('searchButton').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent page reload on form submission
