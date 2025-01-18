@@ -1,29 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('searchButton').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent page reload on form submission
-    
-    const query = document.getElementById('searchQuery').value.trim();
-    console.log("Search button clicked");
 
-    // Ensure the query is not empty
-    if (query === '') {
-        alert("Please enter a search term.");
-        return;
-    }
-
-    url = `https://test-repo-aqpv.onrender.com/search?q=${query}`;
-    try {
-        console.log("making response");
-        const response = fetch(url);
-        console.log(response);
-        console.log(JSON.parse(response));
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
-        }
-        const json = response.json();
-        console.log(json);
-      } catch (error) {
-        console.log(error);
-      }
+    url = `../search?`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data =>{
+          console.log(data);
+          console.log(data[0].hello);
+        })
+      .catch(error => console.error('Error fetching coordinates:',error));
     });
 });
