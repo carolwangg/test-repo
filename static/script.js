@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    url = `http://127.0.0.1:5000/search?q=${query}`;
+    url = `https://test-repo-aqpv.onrender.com/search?q=${query}`;
     try {
         const response = fetch(url, { mode: 'no-cors'});
         if (!response.ok) {
