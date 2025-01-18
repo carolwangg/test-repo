@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     url = `https://test-repo-aqpv.onrender.com/search?q=${query}`;
     try {
-        const response = fetch(url, { mode: 'no-cors'});
+        const response = fetch(url);
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
