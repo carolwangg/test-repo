@@ -8,11 +8,9 @@ def home():
 @app.route('/search', methods=['GET'])
 def search():
     if not request.args['q']:
-        redirect(url_for('home'))
         return jsonify({"error":"please input a query!", "data": ""})
     
     else:
-        redirect(url_for('home'))
         return jsonify({"error":"", "data": request.args['q']})
          
 
