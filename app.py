@@ -7,9 +7,9 @@ def home():
 
 @app.route('/search', methods=['GET'])
 def search():
+    return jsonify("hello, it's me")
     if not request.args['q']:
         return jsonify({"error":"please input a query!", "data": ""})
-    
     else:
         return jsonify("hello, it's me")
          
