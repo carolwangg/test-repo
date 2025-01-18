@@ -3,7 +3,7 @@ from flask import Flask, jsonify, render_template, request, redirect, url_for
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return "This url is not valid :/"
+    return "This url is not valid ://"
 
 @app.route('/search', methods=['GET'])
 def search():
@@ -11,7 +11,7 @@ def search():
         return jsonify({"error":"please input a query!", "data": ""})
     
     else:
-        return "hello, it's me"
+        return jsonify("hello, it's me")
          
 
 if __name__ == "__main__":
